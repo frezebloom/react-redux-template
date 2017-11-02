@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from "react-redux";
 
 import HeaderButton from './HeaderButton'
 
@@ -11,11 +12,17 @@ const style = {
 const Header = () => {
   return(
     <div className="header" style={style}>
-      <HeaderButton name="home" value="Home" />
-      <HeaderButton name="main" value="Main" />
-      <HeaderButton name="about" value="Abaut" />
+      <HeaderButton id="home" name="home" value="Home" />
+      <HeaderButton id="main"name="main" value="Main" />
+      <HeaderButton id="about"name="about" value="Abaut" />
+      <HeaderButton id="showBlock" name="showBlock" value="Show Block" />
     </div>
   )
 }
 
-export default Header;
+export default connect(
+  state => ({
+    data: state
+  }),
+  dispatch => ({ })
+)(Header);

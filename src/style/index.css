@@ -10,4 +10,8 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin: 20px;
+  cursor: pointer;
+}
+.headerButton:hover{
+  color: blue;
 }

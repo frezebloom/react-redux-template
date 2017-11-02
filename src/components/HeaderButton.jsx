@@ -1,9 +1,27 @@
 import React from 'react';
+import { connect } from "react-redux";
 
-const HeaderButton = ({name, value}) => {
+const handleShowBlock = (event) => {
+  if(event.target.id === 'showBlock'){
+    console.log('sa')
+  }
+
+}
+
+const HeaderButton = ({name, value, id, data}) => {
   return(
-    <div className="headerButton" name={name}>{value}</div>
+    <div className="headerButton" id={id} onClick={handleShowBlock} name={name}>{value}</div>
   )
 }
 
-export default HeaderButton;
+
+export default connect(
+  state => ({
+    data: state
+  }),
+  dispatch => ({
+    showBlock: state => {
+      dispatch({ type: "SHOW_BLOCK", payload: state });
+    }
+  })
+)(HeaderButton);

@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.headerButton{
+  color: #FBF8EF;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px;
+}

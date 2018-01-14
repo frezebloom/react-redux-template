@@ -3,22 +3,19 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 
 import Header from './Header'
-import Block from './Block'
+import Button from './Button'
+
 
 class App extends Component {
   render() {
+    
     return (
       <div>
         <Header />
-        <Block />
+        <Button />
       </div>
     );
   }
 }
 
-export default connect(
-  state => ({
-    data: state
-  }),
-  dispatch => ({ })
-)(App);
+export default App;

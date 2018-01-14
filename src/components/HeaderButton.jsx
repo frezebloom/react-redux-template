@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 
 const handleShowBlock = (event) => {
   if(event.target.id === 'showBlock'){
-    console.log('sa')
+   
+    this.props.showBlock(true);
   }
 
 }
@@ -22,6 +23,6 @@ export default connect(
   dispatch => ({
     showBlock: state => {
       dispatch({ type: "SHOW_BLOCK", payload: state });
-    }
+    },
   })
 )(HeaderButton);
